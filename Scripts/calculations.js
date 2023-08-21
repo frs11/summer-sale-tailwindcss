@@ -1,21 +1,38 @@
 document.getElementById("catOneProdOne").addEventListener("click", function()
 {
-    let prodPrice = getInnerTextAmount('catOneProdOnePrice');
-    let prodName = getInnerTextName('catOneProdOneName');
-    let totalWithoutDiscount = getInnerTextAmount('withoutDiscountTotal');
-    let totalWithDiscount = getInnerTextAmount('withDiscountTotal');
+    productPriceCalculation('catOneProdOnePrice', 'catOneProdOneName')
 
-    totalWithoutDiscount += prodPrice;
-    totalWithDiscount += prodPrice;
-
-    addProductToTheList(prodName);
-    setInnerTextAmount('withoutDiscountTotal', totalWithoutDiscount); 
-    setInnerTextAmount('withDiscountTotal', totalWithDiscount); 
-    
-    buttonStatus(totalWithoutDiscount);
-
-    console.log("Selected Item is: " + prodName + " Price is: " + prodPrice + " Total With  discount is: " + totalWithDiscount + " total without discount is: " + totalWithoutDiscount);
 })
+document.getElementById("catOneProdTwo").addEventListener("click", function()
+{
+    productPriceCalculation('catOneProdTwoPrice', 'catOneProdTwoName')
+
+})
+document.getElementById("catOneProdThree").addEventListener("click", function()
+{
+    productPriceCalculation('catOneProdThreePrice', 'catOneProdThreeName')
+
+})
+document.getElementById("catTwoProdOne").addEventListener("click", function()
+{
+    productPriceCalculation('catTwoProdOnePrice', 'catTwoProdOneName')
+
+})
+document.getElementById("catTwoProdTwo").addEventListener("click", function()
+{
+    productPriceCalculation('catTwoProdTwoPrice', 'catTwoProdTwoName')
+
+})
+document.getElementById("catTwoProdThree").addEventListener("click", function()
+{
+    productPriceCalculation('catTwoProdThreePrice', 'catTwoProdThreeName')
+
+})
+
+
+
+
+
 
 
 
@@ -24,5 +41,6 @@ document.getElementById("catOneProdOne").addEventListener("click", function()
 // Refresh Screen
 document.getElementById('goHomeButton').addEventListener('click', function()
 {
-    window.location.href = "index.html";
+    // window.location.href = "index.html";
+    window.location.reload();
 })
